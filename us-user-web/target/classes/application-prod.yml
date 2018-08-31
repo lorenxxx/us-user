@@ -1,0 +1,5 @@
+swagger.enabled: false
+
+config.code: 1001
+config.name: prod
+config.hobby: hobbyX, hobbyY
