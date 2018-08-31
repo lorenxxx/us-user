@@ -1,5 +1,0 @@
-swagger.enabled: true
-
-config.code: 1001
-config.name: test
-config.hobby: hobbyX, hobbyY

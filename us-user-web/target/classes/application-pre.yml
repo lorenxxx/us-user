@@ -1,5 +1,0 @@
-swagger.enabled: true
-
-config.code: 1001
-config.name: pre
-config.hobby: hobbyX, hobbyY
