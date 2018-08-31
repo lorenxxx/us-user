@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Api(value = "First Demo", description = "First Demo")
 @RestController
-@RequestMapping("/api/v1/demo")
+@RequestMapping("/demo")
 public class DemoController {
 
     @ApiOperation(value = "Say Hello", notes = "Say Hello")
-    @GetMapping("/hello")
-    public Result<String> hello() {
+    @GetMapping
+    public Result<String> demo() {
         return Result.success("OK", "Hello, SpringBoot!");
     }
 
