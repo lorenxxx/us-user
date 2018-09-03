@@ -10,6 +10,15 @@ spring:
     ansi:
       enabled: always
 
+mybatis:
+  mapper-locations: classpath*:/mybatis/mapper/**.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
 blog.address: https://www.us.com
 blog.author: Loren
 

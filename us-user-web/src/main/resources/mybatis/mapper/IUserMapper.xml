@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?> <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.us.user.mapper.IUserMapper">
+
+    <resultMap id="userResultMap" type="com.us.user.entity.User">
+        <id column="id" property="id"></id>
+        <result column="name" property="name"></result>
+        <result column="sex" property="sex"></result>
+        <result column="age" property="age"></result>
+    </resultMap>
+
+    <select id="listUsers" resultMap="userResultMap">
+        select
+          *
+        from us_user;
+    </select>
+
+</mapper>
+
+
+
+

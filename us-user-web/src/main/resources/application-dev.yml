@@ -1,3 +1,24 @@
+spring:
+  datasource:
+    name: dev
+    url: jdbc:mysql://116.62.205.252:3306/us_user_dev
+    username: loren
+    password: loren070941
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+
 swagger.enabled: true
 
 config.code: 1001
