@@ -1,5 +1,5 @@
 # 用户表
-create table app_user(
+create table us_user(
 	id int(11) not null auto_increment comment "主键Id",
 	name varchar(100) not null comment "姓名",
 	sex tinyint unsigned not null comment "性别：0，未知；1，男；2，女；",
