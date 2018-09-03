@@ -1,0 +1,8 @@
+# 用户表
+create table app_user(
+	id int(11) not null auto_increment comment "主键Id",
+	name varchar(100) not null comment "姓名",
+	sex tinyint unsigned not null comment "性别：0，未知；1，男；2，女；",
+	age tinyint unsigned not null comment "年龄",
+	primary key(id)
+) engine=innodb default charset=utf8 comment "用户表";
