@@ -33,8 +33,8 @@ spring:
   rabbitmq:
     host: 116.62.205.252
     port: 5672
-    username:
-    password:
+    username: dev
+    password: loren070941
 
 # Swagger
 swagger.enabled: true
