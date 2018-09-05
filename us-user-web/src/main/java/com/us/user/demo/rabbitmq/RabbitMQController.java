@@ -2,7 +2,6 @@ package com.us.user.demo.rabbitmq;
 
 import com.us.user.common.Result;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class RabbitMQController {
 
     @Autowired
-    private AmqpTemplate amqpTemplate;
+    IRabbitMQService rabbitMQService;
 
     @PostMapping("/send")
     public Result<String> send(@RequestParam("msg") String msg) {
         log.info("msg: " + msg);
 
-        amqpTemplate.convertAndSend("demo", msg);
+        rabbitMQService.sendMsg(msg);
         return Result.success("OK", msg);
     }
 
