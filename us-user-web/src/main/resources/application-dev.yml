@@ -30,6 +30,11 @@ spring:
         max-wait: 1
         max-idle: 8
         min-idle: 0
+  rabbitmq:
+    host: 116.62.205.252
+    port: 5672
+    username:
+    password:
 
 # Swagger
 swagger.enabled: true
