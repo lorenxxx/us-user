@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
  * @date 2018/9/5 9:52 PM
  */
 @SpringBootTest
-public class ServiceTest extends BaseTest {
+public class CommonTest extends BaseTest {
 
     @BeforeClass
     public static void beforeClass() {
