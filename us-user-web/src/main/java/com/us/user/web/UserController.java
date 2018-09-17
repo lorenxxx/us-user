@@ -27,7 +27,7 @@ public class UserController implements IUserController {
     @Override
     public Result<List<User>> queryUsers() {
         List<User> users = userService.queryUsers();
-        return Result.success("OK", users);
+        return Result.success("凉凉了", users);
     }
 
 }
