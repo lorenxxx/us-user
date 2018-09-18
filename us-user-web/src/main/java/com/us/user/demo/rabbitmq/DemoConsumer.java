@@ -10,10 +10,10 @@ import org.springframework.stereotype.Component;
  * @date 2018/9/5 8:37 PM
  */
 @Component
-@RabbitListener(queues = "demo")
 @Slf4j
 public class DemoConsumer {
 
+    @RabbitListener(queues = "demo")
     @RabbitHandler
     public void process(String msg) {
         log.info("DemoConsumer Receive: " + msg);
