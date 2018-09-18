@@ -49,6 +49,16 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.8.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.us</groupId>
+            <artifactId>claudine-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.us</groupId>
+            <artifactId>claudine-common</artifactId>
+        </dependency>
     </dependencies>
 
     <repositories>

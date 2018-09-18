@@ -1,6 +1,6 @@
 package com.us.user.demo.log;
 
-import com.us.user.common.Result;
+import com.us.claudine.common.response.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.us.user.web;
 
-import com.us.user.common.Result;
+import com.us.claudine.common.response.Result;
 import com.us.user.entity.User;
 import com.us.user.service.IUserService;
 import lombok.extern.slf4j.Slf4j;

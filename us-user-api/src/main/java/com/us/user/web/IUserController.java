@@ -1,6 +1,6 @@
 package com.us.user.web;
 
-import com.us.user.common.Result;
+import com.us.claudine.common.response.Result;
 import com.us.user.entity.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

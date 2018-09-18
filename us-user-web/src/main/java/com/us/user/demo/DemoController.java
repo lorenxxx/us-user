@@ -1,6 +1,6 @@
 package com.us.user.demo;
 
-import com.us.user.common.Result;
+import com.us.claudine.common.response.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
