@@ -37,7 +37,7 @@ spring:
     password: loren070941
 
 # Swagger
-swagger.enabled: true
+claudine.swagger.enabled: true
 
 # Custom
 config.code: 1001
