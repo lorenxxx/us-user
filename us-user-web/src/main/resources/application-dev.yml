@@ -48,8 +48,20 @@ claudine:
     email: liangliangpro@outlook.com
     basePackage: com.us.user
     pathMapping: /
+  datasource:
+    user:
+      url: jdbc:mysql://rm-2ze2433x22ce09k6f.mysql.rds.aliyuncs.com/alpha_60?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true
+      username: alpha_dev
+      password: EJ82fVcH3h!K
+    permission:
+      url: jdbc:mysql://rm-2ze2433x22ce09k6f.mysql.rds.aliyuncs.com/alpha_user?useUnicode=true&amp;characterEncoding=utf8&amp;autoReconnect=true&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true
+      username: alpha_user_dev
+      password: H87w!9w3A6qF
 
 # Custom
 config.code: 1001
 config.name: dev
 config.hobby: hobbyX, hobbyY
+
+
+
