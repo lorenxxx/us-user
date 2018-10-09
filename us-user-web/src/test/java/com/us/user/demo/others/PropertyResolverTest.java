@@ -28,7 +28,9 @@ public class PropertyResolverTest extends AbstractCommonTest implements Environm
         String configName = environment.getProperty("config.name");
         environment.containsProperty("spring");
         System.out.println(configName);
-        List<DataSourceProperties> dataSourceProperties = binder.bind("claudine.datasource", Bindable.listOf(DataSourceProperties.class)).orElse(null);
+        String configName2 = binder.bind("config.name", Bindable.of(String.class)).get();
+        System.out.println(configName2);
+        List<DataSourceProperties> dataSourceProperties = binder.bind("claudine.datasource", Bindable.listOf(DataSourceProperties.class)).get();
         dataSourceProperties.forEach((dataSourceProperty) -> System.out.println(dataSourceProperty.getUrl()));
     }
 
