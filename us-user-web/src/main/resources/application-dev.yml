@@ -37,7 +37,17 @@ spring:
     password: loren070941
 
 # Swagger
-claudine.swagger.enabled: true
+claudine:
+  swagger:
+    enabled: true
+    title: User API
+    description: User Microservice API
+    version: 1.0.0
+    author: Loren
+    url: https://www.us.com/claudine/
+    email: liangliangpro@outlook.com
+    basePackage: com.us.user
+    pathMapping: /
 
 # Custom
 config.code: 1001

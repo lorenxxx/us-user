@@ -1,5 +1,47 @@
-swagger.enabled: true
+# MySQL Redis
+spring:
+  datasource:
+    name: dev
+    url: jdbc:mysql://116.62.205.252:3306/us_user_dev
+    username: loren
+    password: loren070941
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    database: 0
+    host: 116.62.205.252
+    port: 6379
+    password: loren070941
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 1
+        max-idle: 8
+        min-idle: 0
+  rabbitmq:
+    host: 116.62.205.252
+    port: 5672
+    username: dev
+    password: loren070941
 
+# Swagger
+claudine:
+  swagger:
+    enabled: false
+
+# Custom
 config.code: 1001
-config.name: pre
+config.name: dev
 config.hobby: hobbyX, hobbyY
