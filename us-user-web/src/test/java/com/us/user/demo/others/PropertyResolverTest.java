@@ -31,7 +31,7 @@ public class PropertyResolverTest extends AbstractCommonTest implements Environm
         String configName2 = binder.bind("config.name", Bindable.of(String.class)).get();
         System.out.println(configName2);
         List<DataSourceProperties> dataSourceProperties = binder.bind("claudine.datasource", Bindable.listOf(DataSourceProperties.class)).get();
-        dataSourceProperties.forEach((dataSourceProperty) -> System.out.println(dataSourceProperty.getUrl()));
+        //dataSourceProperties.forEach((dataSourceProperty) -> System.out.println(dataSourceProperty.getUrl()));
     }
 
 }

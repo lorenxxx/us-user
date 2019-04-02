@@ -10,9 +10,9 @@ import org.springframework.context.annotation.PropertySource;
 @ServletComponentScan
 @MapperScan("com.us.user.dao")
 @PropertySource(value = "classpath:admin-config.yml", encoding = "utf-8")
-public class UsUserWebApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(UsUserWebApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 }
