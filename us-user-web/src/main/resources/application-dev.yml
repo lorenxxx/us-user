@@ -56,9 +56,9 @@ claudine:
           username: loren
           password: EJ82fVcH3h!K
         node2:
-          url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
-          username: loren
-          password: EJ82fVcH3h!K
+          url: jdbc:mysql://116.62.205.252:3306/us_user_dev2
+          username: loren2
+          password: EJ82fVcH3h!K2
       slave:
         node1:
           url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
@@ -68,6 +68,12 @@ claudine:
           url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
           username: loren
           password: EJ82fVcH3h!K
+
+single:
+  datasource:
+    url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
+    username: loren
+    password: EJ82fVcH3h!K
 
 # Custom
 config.code: 1001

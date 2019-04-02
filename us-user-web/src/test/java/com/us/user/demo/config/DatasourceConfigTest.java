@@ -16,9 +16,17 @@ public class DatasourceConfigTest extends AbstractCommonTest {
     @Autowired
     private DatasourceConfig datasourceConfig;
 
+    @Autowired
+    private AdminConfig adminConfig;
+
+    @Autowired
+    private SingleDatasourceConfig singleDatasourceConfig;
+
     @Test
     public void test() {
         System.out.println(datasourceConfig);
+        System.out.println(adminConfig);
+        System.out.println(singleDatasourceConfig);
     }
 
 }

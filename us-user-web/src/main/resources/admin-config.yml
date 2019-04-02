@@ -1,3 +1,4 @@
-admin.name: 梁良
-admin.age: 26
-admin.hobby: 音乐, 影视
+admin:
+  name: 梁良
+  age: 26
+  hobby: 音乐, 影视
