@@ -1,14 +1,13 @@
 package com.us.user.demo.others;
 
 import com.us.claudine.test.AbstractCommonTest;
-import com.us.user.demo.bind.DataSourceProperties;
 import org.junit.Test;
-import org.springframework.boot.context.properties.bind.Bindable;
 import org.springframework.boot.context.properties.bind.Binder;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.core.env.Environment;
 
-import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by Loren on 2018/10/9.
@@ -23,17 +22,39 @@ public class PropertyResolverTest extends AbstractCommonTest implements Environm
     }
 
     @Test
-    public void getProertiesByPrefix() {
+    public void test() {
         Binder binder = Binder.get(environment);
-        String configName = environment.getProperty("config.name");
-        environment.containsProperty("spring");
-        System.out.println(configName);
-        String configName2 = binder.bind("config.name", Bindable.of(String.class)).get();
-        System.out.println(configName2);
-        System.out.println(environment.containsProperty("single:datasource"));
-        System.out.println(environment.containsProperty("claudine.datasource"));
-        List<DataSourceProperties> dataSourceProperties = binder.bind("claudine.datasource", Bindable.listOf(DataSourceProperties.class)).get();
-        System.out.println(dataSourceProperties);
+        Map dataSourceMap = binder.bind("claudine.datasource", Map.class).get();
+        //System.out.println(dataSourceMap);
+
+        Set<Map.Entry> dataSourceEntries = dataSourceMap.entrySet();
+        for (Map.Entry dataSourceEntry : dataSourceEntries) {
+            String dataSourceKey = (String) dataSourceEntry.getKey();
+            Map dataSourceValue = (Map) dataSourceEntry.getValue();
+
+            System.out.println("数据源: [" + dataSourceKey + "] ----------------------------------");
+            System.out.println();
+
+            Map masterNodeMap = (Map) dataSourceValue.get("master");
+            System.out.println("主库节点: ");
+            for (Object node : masterNodeMap.values()) {
+                Map nodeProperties = (Map) node;
+                System.out.println(nodeProperties.get("url"));
+            }
+
+            System.out.println("从库节点: ");
+            Map slaveNodeMap = (Map) dataSourceValue.get("slave");
+            for (Object node : slaveNodeMap.values()) {
+                Map nodeProperties = (Map) node;
+                System.out.println(nodeProperties.get("url"));
+            }
+
+            System.out.println("-------------------------------------------------");
+
+        }
+
+
+
     }
 
 }

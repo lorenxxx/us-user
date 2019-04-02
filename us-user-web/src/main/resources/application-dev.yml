@@ -52,22 +52,41 @@ claudine:
     user:
       master:
         node1:
-          url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
+          url: jdbc:mysql://116.62.205.252:3306/user_master_1
           username: loren
           password: EJ82fVcH3h!K
         node2:
-          url: jdbc:mysql://116.62.205.252:3306/us_user_dev2
-          username: loren2
+          url: jdbc:mysql://116.62.205.252:3306/user_master_2
+          username: loren
           password: EJ82fVcH3h!K2
       slave:
         node1:
-          url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
+          url: jdbc:mysql://116.62.205.252:3306/user_slave_1
           username: loren
           password: EJ82fVcH3h!K
         node2:
-          url: jdbc:mysql://116.62.205.252:3306/us_user_dev1
+          url: jdbc:mysql://116.62.205.252:3306/user_slave_2
           username: loren
           password: EJ82fVcH3h!K
+    order:
+        master:
+          node1:
+            url: jdbc:mysql://116.62.205.252:3306/order_master_1
+            username: loren
+            password: EJ82fVcH3h!K
+          node2:
+            url: jdbc:mysql://116.62.205.252:3306/order_master_2
+            username: loren
+            password: EJ82fVcH3h!K2
+        slave:
+          node1:
+            url: jdbc:mysql://116.62.205.252:3306/order_slave_1
+            username: loren
+            password: EJ82fVcH3h!K
+          node2:
+            url: jdbc:mysql://116.62.205.252:3306/order_slave_2
+            username: loren
+            password: EJ82fVcH3h!K
 
 single:
   datasource:
