@@ -12,6 +12,8 @@ import java.util.List;
 @Mapper
 public interface IUserMapper {
 
+    int addUser(User user);
+
     List<User> listUsers();
 
 }

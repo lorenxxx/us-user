@@ -8,6 +8,20 @@
         <result column="age" property="age"></result>
     </resultMap>
 
+    <insert id="addUser" parameterType="com.us.user.entity.User" useGeneratedKeys="true" keyProperty="id">
+        insert into us_user(
+        id,
+        name,
+        sex,
+        age
+        ) value (
+        #{id},
+        #{name},
+        #{sex},
+        #{age}
+        )
+    </insert>
+
     <select id="listUsers" resultMap="userResultMap">
         select
           *

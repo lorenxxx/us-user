@@ -55,6 +55,7 @@ claudine:
           url: jdbc:mysql://116.62.205.252:3306/user_master_1
           username: loren
           password: EJ82fVcH3h!K
+          defaultDatasource: true
         node2:
           url: jdbc:mysql://116.62.205.252:3306/user_master_2
           username: loren
