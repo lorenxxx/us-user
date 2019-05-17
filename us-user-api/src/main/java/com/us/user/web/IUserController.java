@@ -17,4 +17,7 @@ public interface IUserController {
     @ApiOperation(value = "查询用户列表", notes = "查询用户列表")
     Result<List<User>> queryUsers();
 
+    @ApiOperation(value = "新增用户", notes = "新增用户")
+    Result<User> addUser();
+
 }

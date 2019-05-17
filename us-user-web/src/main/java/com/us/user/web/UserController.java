@@ -5,7 +5,7 @@ import com.us.user.entity.User;
 import com.us.user.service.IUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,11 +23,19 @@ public class UserController implements IUserController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping
+    //@GetMapping
+    @RequestMapping
     @Override
     public Result<List<User>> queryUsers() {
         List<User> users = userService.queryUsers();
         return Result.success("ok", users);
     }
+
+    @PostMapping
+    @Override
+    public Result<User> addUser() {
+        return null;
+    }
+
 
 }
