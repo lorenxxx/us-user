@@ -3,6 +3,7 @@ package com.us.user.service.impl;
 import com.us.user.entity.User;
 import com.us.user.mapper.IUserMapper;
 import com.us.user.service.IUserService;
+import com.us.user.strategy.sex.SexHandlerContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,6 +21,9 @@ public class UserService implements IUserService {
     @Autowired
     private IUserMapper userMapper;
 
+    @Autowired
+    private SexHandlerContext sexHandlerContext;
+
     @Override
     @Transactional
     public Integer addUser(User user) {
@@ -35,6 +39,12 @@ public class UserService implements IUserService {
     @Override
     public List<User> queryUsers() {
         return userMapper.listUsers();
+    }
+
+    @Override
+    public String handleUserByGender(User user) {
+        sexHandlerContext.getHandler(user.getSex().toString()).handle();
+        return "ok";
     }
 
 }

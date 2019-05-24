@@ -14,4 +14,6 @@ public interface IUserService {
 
     List<User> queryUsers();
 
+    String handleUserByGender(User user);
+
 }
