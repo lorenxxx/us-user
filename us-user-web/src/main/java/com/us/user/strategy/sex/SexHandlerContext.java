@@ -30,7 +30,7 @@ public class SexHandlerContext implements BeanFactoryPostProcessor {
         handlerMap = Maps.newHashMap();
         Set<Class<?>> clazzSet = ClassScanner.scan(BASE_PACKAGE, SexHandleType.class);
         for (Class clazz : clazzSet) {
-            String type = clazz.getAnnotation(SexHandleType.class);
+            //String type = clazz.getAnnotation(SexHandleType.class);
 
         }
     }
