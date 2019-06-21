@@ -1,4 +1,4 @@
-package com.us.user.kafka.producer;
+package com.us.user.demo.kafka.producer;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,18 +6,18 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
 /**
- * @ClassName KafkaProducer
- * @Desciption Kafka生产者
+ * @ClassName DemoProducer
+ * @Desciption TODO
  * @Author loren
- * @Date 2019/6/14 3:09 PM
+ * @Date 2019/6/21 4:26 PM
  * @Version 1.0
  **/
 @Component
 @Slf4j
-public class KafkaProducer {
+public class DemoKafkaProducer {
 
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private KafkaTemplate<Integer, String> kafkaTemplate;
 
     public void sendMessage(String topic, String message) {
         kafkaTemplate.send(topic, message);
